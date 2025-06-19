@@ -16,6 +16,11 @@ body{
 
  
 }
+@media (max-width:600px){
+    .container{
+        flex-direction: column ;
+    }
+}
 /* Container */
 .container{
     border: 50px solid linear-gradient(to right, #656565, #7f42a7, #6600c5,#5300a0,#757575,#757575);
