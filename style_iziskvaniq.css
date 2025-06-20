@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+ min-height: 70vh;
+ background-color: #050505;
+ line-height: 1.5;
+ align-items: center;
+    justify-content: center;
+    display: flex;
+
+ 
+}
+/* Container */
+.container{
+    max-width: 100%;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+ border: 50px solid linear-gradient(to right, #656565, #7f42a7, #6600c5,#5300a0,#757575,#757575);
+    background-size: 200%;
+    animation: animationGradient 2,5s linear infinite;
+    box-shadow: 0 0 15px rgba(255,255,255,0.3);
+    padding: 5px;
+}
+/* Header */
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 4rem;
+     z-index: 999;
+}
+header h1{
+    font-size: 1.5rem;
+    color: white;
+    letter-spacing: 0.1rem;
+}
+nav{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-left: -7%;
+}
+nav a{
+    font-size: 1.3rem;
+    letter-spacing: 0.1rem;
+    transition: color 0.2s ease;
+    text-decoration: none;
+    color: white;
+    margin-left: 10%;
+}
+nav a:hover{
+    color: grey;
+}
+ 
+.content{
+    
+    max-width: 100%;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    margin-top: 10%;
+}
+.content h1{
+    
+    color: white;
+    font-size: 1.2rem;
+    line-height: 1.7;
+} 
+ @media (max-width: 768px){
+     header{
+            padding: 1rem 0.1remS;
+        }
+
+        nav {
+            flex-direction: column;
+        }
+        nav img{
+            
+            width: 100%;  
+            height: 100%; 
+            margin-left: 10%;                   
+        }
+        .content{
+            width: 100%;
+        }
+        .content h1{
+            margin-top: 10%;
+            font-size: 1.1rem;
+        }
+    }
