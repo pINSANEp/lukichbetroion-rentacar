@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<html lang="bg">
+<link rel="stylesheet" href="sinq_shkoda.css">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+    <body>
+        <div class="container">
+          <header>          
+            <nav> 
+            <img  src="snimki/лого1.png" width="250"></h1>"
+            <a href="index.html">Начало</a>
+            <a href="Avtomobili.html">Автомобили</a>
+            <a href="kontakti.html">Контакти</a>
+            <a href="iziskvaniq.html">Изисквания</a>   
+</nav>
+            </header>
+            <main>
+            <div class="slider">
+                <h2>Scoda Octavia</h2>
+                <div class="slides">
+                    <div class="slide"> <img  src="snimki/siva skoda.webp" alt="Img #1"> </div>
+                    <div class="slide"> <img  src="snimki/siva-skoda (1).webp" alt="Img #2"></div>
+                    <div class="slide"> <img  src="snimki/siva-skoda (2).webp" alt="Img #3"></div>
+                    <div class="slide"> <img  src="snimki/siva-skoda-1.webp" alt="Img #4"></div>
+                    <div class="slide"> <img  src="snimki/siva-skoda-2.webp" alt="Img #5"></div>
+                    <div class="slide"> <img  src="snimki/interior-skoda (4).webp" alt="Img #8"></div>
+                    <div class="slide">  <img  src="snimki/interior-skoda (7).webp" alt="Img #9"></div>
+                    <div class="slide"> <img  src="snimki/interior-skoda (8).webp" alt="Img #10"></div>
+                   <p>Марка: Шкода<br>Модел: Октавия<br>Модификация (Двигател): 2.0 TDI (184 кс) DSG 4x4<br>Цвят: Син<br>Тип каросерия: Комби<br>Година на производство: 2016<br>Мощност: 184кс.<br>Вид скоростна кутия: Автоматична<br>Брой места: 5<br>Брой врати: 5<br>Максимален обем на багажника: 1740 л<br>Разход на гориво - градско: 5.6 л/100 км<br>Разход на гориво - извънградско: 4.4 л/100 км<br>Разход на гориво - комбиниран: 4.9 л/100 км<br>Тип гориво: Дизел</p>
+                    <form id="form">
+                      <div class="popup-image">
+                        <span>&times;</span>
+                        <img src="snimki/sinq-skoda.webp" alt="">
+                      </div>
+    
+                    <div class="field1">
+      <h2>Резервирайте сега!</h2>
+  <div class="field">
+    <label for="name">Име и Фамилия</label>
+    <input type="text" name="name" id="name" required />
+  </div>
+  <div class="field">
+    <label for="email">Имейл адрес</label>
+    <input type="text" name="email" id="email" required />
+  </div>
+  <div class="field">
+    <label for="nomer">Телефонен номер</label>
+    <input type="text" name="nomer" id="nomer" required />
+  </div>
+  <div class="field">
+    <label for="car">Автомобил</label>
+    <input type="text" name="car" id="car" required placeholder="Skoda Octavia Сива"/>
+  </div>
+  <div class="field">
+        <label for="date">Дата на взимане</label>
+        <input type="date" name="date" id="date" required />
+      </div>
+  <div class="field">
+    <label for="days">Дни под наем</label>
+    <input type="text" name="days" id="days" required />
+  </div>
+  
+<div class="field2">
+  <input type="submit" id="button" value="Резервирай" >
+  </div>
+  </div>
+</form>
+    
+    <div id="confirmation" class="confirmation" style="display: none;"></div>
+  </div>
+                
+  
+<script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script type="text/javascript">
+  emailjs.init('avILBRJKf6MxUfVtZ')
+</script>
+
+  <script>
+    
+    /* Функция за изпращане на имейл */
+const btn = document.getElementById("button");
+
+document.getElementById("form").addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  btn.value = "Sending...";
+
+  const serviceID = "default_service";
+  const templateID = "template_b0xk76k";
+
+  emailjs.sendForm(serviceID, templateID, this).then(
+    () => {
+      btn.value = "Резервирай";
+      alert("Sent!");
+    },
+    (err) => {
+      btn.value = "Резервирай";
+      alert(JSON.stringify(err));
+    },
+  );
+});
+  </script>
+        </div>
+        <div class="footer">      
+                   
+          <p>Copyright © 2025 Lukich Betroion 24 EOOD <br>All Rights Reserved</p>
+          <hr>
+          <div class="footer1">
+          <a href="kontakti.html"><u>Контакти</u></a>
+            <a href="iziskvaniq.html"><u>Изисквания</u></a>
+            </div>
+            </div>
+        </div>
+                
+        <script src="slider.js"></script>
+        </main>
+</body>
+</html>

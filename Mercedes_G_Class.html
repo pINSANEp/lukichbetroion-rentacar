@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<html lang="bg">
+<link rel="stylesheet" href="Mercedes_S400D.css">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+ <script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "njCdfRztxgPWfe8lS",
+      });
+   })();
+</script>
+</head>
+    <body>
+        <div class="container">
+          <header>          
+            <nav> 
+            <img  src="snimki/лого1.png" width="250"></h1>"
+            <a href="index.html">Начало</a>
+            <a href="Avtomobili.html">Автомобили</a>
+            <a href="kontakti.html">Контакти</a>
+            <a href="iziskvaniq.html">Изисквания</a>   
+</nav>
+            </header>
+            <main>
+              
+            <div class="slider">
+                <h2>Mercedes G 63 Amg</h2>
+                <div class="slides">
+                    <div class="slide"> <img  src="snimki/Mercedes G63 amg/21748262962439119_p1.png" alt="Img #1"> </div>
+                    <div class="slide"> <img  src="snimki/Mercedes G63 amg/21748262962439119_r0.png" alt="Img #2"></div>
+                    <div class="slide"> <img  src="snimki/Mercedes G63 amg/21748262962439119_TC.png" alt="Img #3"></div>
+                    <div class="slide"> <img  src="snimki/Mercedes G63 amg/21748262962439119_cN.webp" alt="Img #4"></div>
+                    <div class="slide"> <img  src="snimki/Mercedes G63 amg/21748262962439119_m6.webp" alt="Img #5"></div>
+                    <div class="slide"> <img  src="snimki/Mercedes G63 amg/21748262962439119_OS.webp" alt="Img #6"></div>
+                    <div class="slide"> <img  src="snimki/Mercedes G63 amg/21748262962439119_R.webp" alt="Img #7"></div>
+                    <div class="slide"> <img  src="snimki/Mercedes G63 amg/21748262962439119_oi.webp" alt="Img #8"></div>
+                  <p>Марка: Mercedes<br>Модел: G63 Amg<br>Модификация (Двигател): 5500 см3 V8<br>Цвят: Черен<br>Тип каросерия: Джип<br>Година на производство: 2016<br>Мощност: 571 к.с.<br>Вид скоростна кутия: Автоматична<br>Брой места: 4<br>Брой врати: 5<br>Минимален обем на багажника: 480 л<br>Разход на гориво - градско: 17.2 л/100 км<br>Разход на гориво - извънградско: 11.8 л/100 км<br>Разход на гориво - комбиниран: 13.8 л/100 км<br>Тип гориво: Бензин</p>
+                    <form id="form">
+                      <div class="popup-image">
+                        <span>&times;</span>
+                        <img src="snimki/sinq-skoda.webp" alt="">
+                      </div>
+    
+                    <div class="field1">
+      <h2>Резервирайте сега!</h2>
+  <div class="field">
+    <label for="name">Име и Фамилия</label>
+    <input type="text" name="name" id="name" required />
+  </div>
+  <div class="field">
+    <label for="email">Имейл адрес</label>
+    <input type="text" name="email" id="email" required />
+  </div>
+  <div class="field">
+    <label for="nomer">Телефонен номер</label>
+    <input type="text" name="nomer" id="nomer" required />
+  </div>
+  <div class="field">
+    <label for="car">Автомобил</label>
+    <input type="text" name="car" id="car" required placeholder="Mercedes G63 Amg"/>
+  </div>
+  <div class="field">
+        <label for="date">Дата на взимане</label>
+        <input type="date" name="date" id="date" required />
+      </div>
+  <div class="field">
+    <label for="days">Дни под наем</label>
+    <input type="text" name="days" id="days" required />
+  </div>
+  
+<div class="field2">
+  <input type="submit" id="button" value="Резервирай" >
+  </div>
+  </div>
+</form>
+    
+    <div id="confirmation" class="confirmation" style="display: none;"></div>
+  </div>
+                
+  
+<script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script type="text/javascript">
+  emailjs.init('avILBRJKf6MxUfVtZ')
+</script>
+  <script>
+    
+    /* Функция за изпращане на имейл */
+const btn = document.getElementById('button');
+
+document.getElementById('form')
+ .addEventListener('submit', function(event) {
+   event.preventDefault();
+
+   btn.value = 'Sending...';
+
+   const serviceID = 'default_service';
+   const templateID = 'template_b0xk76k';
+
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = 'Резервирай';
+      alert('Sent!');
+    }, (err) => {
+      btn.value = 'Резервирай';
+      alert(JSON.stringify(err));
+    });
+});
+  </script>
+        </div>
+        <div class="footer">      
+                   
+          <p>Copyright © 2025 Lukich Betroion 24 EOOD <br>All Rights Reserved</p>
+          <hr>
+          <div class="footer1">
+          <a href="kontakti.html"><u>Контакти</u></a>
+            <a href="iziskvaniq.html"><u>Изисквания</u></a>
+            </div>
+            </div>
+        </div>
+                
+        <script src="slider.js"></script>
+        </main>
+</body>
+</html>

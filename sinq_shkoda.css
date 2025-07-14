@@ -1,0 +1,359 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+ min-height: 90vh;
+ background-color: #050505;
+ line-height: 1.5;
+ align-items: center;
+    justify-content: center;
+    display: flex;
+    
+ 
+}
+
+/* Container */
+.container{
+    border: 50px solid linear-gradient(to right, #656565, #7f42a7, #6600c5,#5300a0,#757575,#757575);
+    background-size: 200%;
+    animation: animationGradient 2,5s linear infinite;
+    box-shadow: 0 0 15px rgba(255,255,255,0.3);
+    padding: 5px;
+    max-width: 100%;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+ 
+}
+/* Header */
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 4rem;
+     z-index: 999;
+}
+header h1{
+    font-size: 1.5rem;
+    color: white;
+    letter-spacing: 0.1rem;
+}
+nav{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-left: -7%;
+}
+nav a{
+    font-size: 1.3rem;
+    letter-spacing: 0.1rem;
+    transition: color 0.2s ease;
+    text-decoration: none;
+    color: white;
+    margin-left: 10%;
+}
+nav a:hover{
+    color: grey;
+} 
+/* Slider */
+.slider{
+    width: 100%;
+    height: 100%;
+   
+}
+.slider h2{
+    color: white;
+    font-size: 1.9rem;
+    margin-top: 5%;
+    margin-bottom: 2% ;
+    justify-self: center;
+}
+
+.slider p{
+    height: 608.11px;
+    width: 500px;
+    border-radius: 10px;
+    border: 50px solid linear-gradient(to right, #656565, #7f42a7, #6600c5,#5300a0,#757575,#757575);
+    background-size: 200%;
+    animation: animationGradient 2,5s linear infinite;
+    box-shadow: 0 0 15px rgba(255,255,255,0.3);
+    line-height: 2.1;
+    margin-top: 1%;
+    color: rgba(255, 255, 255, 0.788);
+    align-self: center;
+    font-size: 1.2rem;
+    text-align: center ;
+    
+    
+}
+
+.slider .slides{
+display: flex;
+flex-wrap: wrap;
+gap: 15px;
+justify-content: center;
+padding: 10px;
+}
+.slider .slides .slide{
+    height: 170px;
+    width: 270px;
+     border-radius: 15px;
+     border: 50px solid linear-gradient(to right, #656565, #7f42a7, #6600c5,#5300a0,#757575,#757575);
+    background-size: 200%;
+    animation: animationGradient 2,5s linear infinite;
+    box-shadow: 0 0 15px rgba(255,255,255,0.3);
+    padding: 1px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.slider .slides .slide img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition:  0.2s linear;
+}
+.slider .slides .slide:hover img{
+    transform: scale(1.1);
+    
+}
+.slider .popup-image{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 100;
+    display: none;
+    height: 100%;
+    width: 100%;;
+    
+}
+.slider .popup-image span{
+    position: absolute;
+    top: 16.5%; right : 30.1%;
+    font-size: 60px;
+    font-weight: bolder;
+    color: gray;
+    cursor: pointer;
+    z-index: 100;
+}
+.slider .popup-image img{
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid #fff;
+    width: 650px;
+    object-fit: cover;
+    overflow: hidden;
+}
+@media (max-width: 768px) {
+    .slider .popup-image img{
+        width: 95%;
+    }
+}
+.popup-image button{
+    color: white;
+}
+/*booking*/
+
+.field1 {
+    margin-top: 3%;
+    width: 500px;
+    height: 610px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    animation: animationGradient 2,5s linear infinite;
+    box-shadow: 0 0 15px rgba(255,255,255,0.3);
+    padding: 15px;
+    align-self: center  ;
+}
+
+.field1 h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.field1 .form-group {
+    margin-bottom: 15px;
+}
+
+.field1 label {
+    display: block;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.field1 input,
+.field1 select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.field2 input{
+    margin-top: 2%;
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.field2 input:hover {
+    background-color: #0056b3;
+}
+
+.field2 input .confirmation {
+    margin-top: 20px;
+    background: #e6ffe6;
+    padding: 15px;
+    border-radius: 5px;
+    color: #2d662d;
+}
+.footer{
+    background-color: rgb(7, 7, 7);
+    width: 100%;
+    height: 100px;
+    
+    padding: 1rem 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(255,255,255,0.3);
+}
+hr{
+    border-color: gray;
+}
+.footer p{
+color: gray;
+}
+.footer1{
+    
+    justify-items: center;
+    padding: 0 33rem ;
+    
+}
+.footer1 a{
+    color: gray;
+    margin: 5px;
+}
+
+.footer p{
+    text-align: center;
+    
+}
+
+@media (max-width: 768px){
+     .body{
+        min-height: 100%;
+        width: 100%;
+    }
+
+        header{
+            padding: 1rem 0.1remS;
+        }
+
+        nav {
+            flex-direction: column;
+        }
+        nav img{
+            
+            width: 100%;  
+            height: 100%; 
+            margin-left: 5%;                   
+        }
+        nav a{
+            margin-left: 5%;
+        }
+        .slider{
+            margin-top: 30%;
+            width: 100%;
+            height: 2000px;
+        }
+        .slider p{
+            width: 80%;
+            height: 100%;
+        }
+        .slider .slides .slide{
+            height: 90px;
+            width: 150px;
+            
+            overflow: hidden;
+        }
+        .slider .slides .slide img{
+    width: 100%;
+    height: 100%;
+        }
+        .field1{
+            width: 80%;
+        }
+        .slider .popup-image img{
+        width: 80%;
+    }
+    .slider .popup-image span{
+    position: absolute;
+    top: 24%; right : 9.1%;
+    font-size: 60px;
+    font-weight: bolder;
+    color: gray;
+    cursor: pointer;
+    z-index: 100;
+    }
+    .slider p{
+        
+    height: 50%;
+    width: 80%;
+    border-radius: 10px;
+    border: 50px solid linear-gradient(to right, #656565, #7f42a7, #6600c5,#5300a0,#757575,#757575);
+    background-size: 200%;
+    animation: animationGradient 2,5s linear infinite;
+    box-shadow: 0 0 15px rgba(255,255,255,0.3);
+    line-height: 1.7;
+    margin-top: 1%;
+    color: rgba(255, 255, 255, 0.788);
+    align-self: center;
+    font-size: 0.8rem;
+    
+    
+    
+}
+   .field1 {
+    margin-top: 3%;
+    width: 325px;
+    height: 100%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    animation: animationGradient 2,5s linear infinite;
+    box-shadow: 0 0 15px rgba(255,255,255,0.3);
+    
+    
+} 
+.footer{
+    width: 100%;
+    height: 100px;
+    margin-top: -90%;
+    flex-direction: column;
+ }
+ .footer p{
+    font-size: 0.8rem;
+ }
+ .footer1{
+    display: flex;
+    justify-items: center;
+    padding: 0 120px ;
+}
+.footer1 a{
+    color: gray;
+    margin: 5px;
+    
+}
+    }
+    
+    
